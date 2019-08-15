@@ -14,10 +14,17 @@ export class LicensePermissionMappingComponent implements OnInit {
   totalCount = 0;
   pageNo = 1;
   permissionIdList = [];
+  permissions = [];
   @Output() submit$ = new EventEmitter();
   constructor(private configurationService: ConfigurationService) { }
 
   ngOnInit() {
+    if (this.permissions) {
+      console.log(this.permissions);
+      this.permissions.forEach(p => {
+        this.select(p);
+      });
+    }
     this.get();
   }
 select(permission) {

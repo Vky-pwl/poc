@@ -67,6 +67,7 @@ import { LineChartComponent } from './components/line-chart/line-chart.component
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { ImportFromCsvComponent } from './components/import-from-csv/import-from-csv.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 
 
 @NgModule({
@@ -131,6 +132,7 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     HttpClientModule,
     ChartsModule,
     AppRoutingModule,
+    DynamicFormModule,
     QuillModule.forRoot({
       modules: {
         toolbar: [
